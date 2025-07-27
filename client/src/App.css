@@ -1,0 +1,145 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* BACKGROUND
+body {
+  margin: 0;
+  padding: 0;
+  background: url('your-background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+} */
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 3px;
+}
+
+div .postDiv {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: rgb(214, 214, 214);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.selectedPost {
+  border: 10px solid #716e63;
+  background-color: rgb(214, 214, 214);
+}
+
+.selectedAlbum {
+  text-align: center;
+}
+
+.photosUl {
+  margin-left: -50px;
+}
+
+.LoadMoreBtn,
+.commentsDiv {
+  border-radius: 10px;
+  transition: border-color 0.25s;
+  border: 5px solid #716e63;
+  background-color: rgb(207, 204, 188);
+}
+
+.usersList,
+.camerasList,
+.camerasAccessList {
+  text-align: left;
+  padding-left: 100px;
+}
+
+.password-btn,
+.edit-btn,
+.delete-btn,
+.add-btn {
+  /* background: none;
+  border: none; */
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  outline: none; /* Remove the outline when the button is focused */
+}
+
+.UserDetails,
+.cameraDetails,
+.cameraAccessDetails {
+  display: inline;
+}
+
+.form-group {
+  text-align: left;
+  padding-left: 250px;
+  padding-right: 250px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.form-group input {
+  flex: 1;
+}
+
+/* .input-group {
+  text-align: left;
+  padding-right: 20%;
+} */
+
+/* Media query for tablet screens */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1em;
+  }
+
+  div .postDiv {
+    padding: 0.4em 0.8em;
+    font-size: 0.9em;
+  }
+
+  .photosUl {
+    margin-left: 0;
+  }
+
+  .LoadMoreBtn,
+  .commentsDiv {
+    padding: 1rem;
+  }
+
+  .usersList,
+  .camerasList,
+  .camerasAccessList {
+    padding-left: 20px;
+  }
+
+  .form-group {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .form-group input {
+    flex: 2;
+  }
+}

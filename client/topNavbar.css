@@ -1,0 +1,50 @@
+.top-navbar {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252a;
+}
+
+.top-navbar li,
+.top-navbar a,
+.top-navbar button {
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.top-navbar header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: rgb(139, 37, 0);
+}
+
+.top-navbar button {
+  padding: 9px 25px;
+  background-color: rgb(169, 225, 165);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.top-navbar button:hover {
+  background-color: rgb(218, 158, 20);
+}

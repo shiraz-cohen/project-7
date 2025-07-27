@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: inherit;
+}
+/* a:hover {
+  color: #a1955f;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; Prevent scrolling on the entire body */
+  /* display: flex; */
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s ease-in-out;
+}
+button:hover {
+  border-color: black;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+img,
+canvas,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: lightgray;
+    background-color: #1a1a1a;
+  }
+  a:hover {
+    color: rgb(236, 113, 13);
+  }
+  button {
+    background-color: rgb(169, 225, 165);
+    border-color: rgb(81, 86, 5);
+    border-width: 1.5px;
+    margin: 0.2em;
+  }
+}
+
+.loginPage {
+  overflow: hidden; /* Prevent scrolling on the entire body */
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Set the height of the container to the full viewport height */
+  width: 100%;
+  background-color: #1a1a1a;
+}
+
+.loginPage,
+.loginPage > * {
+  border: none;
+  outline: none;
+}
+
+.loginPage img {
+  width: 55%;
+  max-height: 100vh;
+  height: auto;
+  border-radius: 20px;
+  object-fit: fill; /* or contain, depending on your preference */
+}
+
+.loginPage h1 {
+  color: rgb(139, 37, 0);
+}
+
+.loginPage h2 {
+  color: rgb(218, 158, 20);
+}
+.loginPage label {
+  color: #fff;
+  font-weight: bold;
+  padding-right: 5px;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+}
+
+.password-input {
+  padding-bottom: 20px;
+}
+
+.password-input {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .loginForm {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .loginForm {
+    max-width: 100%;
+  }
+}
+
+.checkboxDiv {
+  margin-left: 100px;
+  text-align: left;
+}
+
+input[type="checkbox"] {
+  accent-color: #4d4a3d;
+  mix-blend-mode: multiply;
+}
+
+.mainBtn {
+  border-color: #838073;
+  border-width: 1.5px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+}
+
+.infoDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 500px;
+  padding: 0 1.5em;
+}
+
+.crudDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: right;
+  margin: 3 auto;
+  width: 35%;
+  max-width: 500px;
+  padding: 0;
+}
+
+.crudBtn {
+  width: 100%;
+  max-width: 500px;
+}
+
+.popup {
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  right: 10%;
+  bottom: 30%;
+  background-image: url(/images/White-curve-brush.jpeg);
+  border-radius: 10px;
+  border: #1a1a1a solid 1px;
+  box-shadow: #1a1a1a 0px 0px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.popup-inner {
+  position: relative;
+  padding: 32px;
+  width: 100%;
+  max-width: 640px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+}
+
+.popup-inner h1 {
+  margin-top: 0;
+}
+
+.popup-close {
+  position: absolute;
+  left: 5vw;
+  bottom: 3vh;
+  width: 100px;
+}
+
+.popup-close:hover {
+  cursor: pointer;
+}
+
+.popup-save {
+  position: absolute;
+  right: 5vw;
+  bottom: 3vh;
+  width: 100px;
+}
+
+.password-toggle,
+.edit-toggle,
+.delete-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  outline: none;
+}
+
+.password-toggle {
+  color: #edf0f1;
+}
+.password-toggle:focus-visible {
+  outline: none;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+}
+
+.popup-content input {
+  margin: 0.5em;
+}
+
+.popup-content textarea {
+  margin: 0.5em;
+  height: 100px;
+  width: 500px;
+}
+
+.popup-content h4 {
+  margin: 0.2em;
+}
+
+.top-navbar {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252a;
+}
+
+.top-navbar li,
+.top-navbar a,
+.top-navbar button {
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.top-navbar header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  font-family: "Bungee Spice", sans-serif;
+  cursor: pointer;
+  text-align: left;
+  /* margin-right: 20px; */
+}
+
+.nav__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 15px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: rgb(218, 126, 20);
+}
+
+.nav__links li:last-child {
+  margin-left: auto;
+}
+
+.top-navbar button {
+  padding: 9px 25px;
+  background-color: rgb(218, 126, 20);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.top-navbar button:hover {
+  background-color: rgb(171, 37, 0);
+}
+
+.logout-button {
+  padding: 9px 15px; /* Adjust the padding as needed */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+@media screen and (max-width: 45rem) {
+  .nav__links {
+    justify-content: flex-start;
+  }
+
+  .welcome-username {
+    font-size: 2.3rem;
+  }
+
+  /* .cameraListImg {
+
+  } */
+
+  .loginForm {
+    margin-left: 30px;
+  }
+  #loginImg {
+    opacity: 0;
+  }
+}
+
+.welcome-username {
+  font-family: "Salsa", cursive;
+}
